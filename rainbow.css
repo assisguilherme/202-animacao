@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Over+the+Rainbow');
+
+body{
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #89CFF0;
+  font-family: 'Over the Rainbow', cursive;
+  font-weight: bolder;
+  font-size: 30pt;
+}
+
+body>div{
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 540px;
+}
+
+h1{
+  z-index: 1;
+  /* visibility: hidden; */
+}
+
+#esconder{
+  background-color: #89CFF0;
+  width: 540px;
+  height: 270px;
+  transform: translateY(100%);
+  /* visibility: hidden; */
+}
+
+.arco{
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  border: 20px solid;
+  animation: girar linear infinite 7s;
+}
+
+.arco:nth-child(1){
+  top:0;
+  border-color: #FF0000;
+  border-bottom-color: transparent;
+  height: 500px;
+  width: 500px;
+  animation-delay: 0s;
+}
+.arco:nth-child(2){
+  top: 20px;
+  border-color: #FF7F00;
+  border-bottom-color: transparent;
+  height: 460px;
+  width: 460px;
+  animation-delay: 0.25s;
+}
+.arco:nth-child(3){
+  top: 40px;
+  border-color: #FFFF00;
+  border-bottom-color: transparent;
+  height: 420px;
+  width: 420px;
+  animation-delay: 0.5s;
+}
+.arco:nth-child(4){
+  top: 60px;
+  border-color: #00FF00;
+  border-bottom-color: transparent;
+  height: 380px;
+  width: 380px;
+  animation-delay: 0.75s;
+}
+.arco:nth-child(5){
+  top: 80px;
+  border-color: #0000FF;
+  border-bottom-color: transparent;
+  height: 340px;
+  width: 340px;
+  animation-delay: 1s;
+}
+.arco:nth-child(6){
+  top: 100px;
+  border-color: #4B0082;
+  border-bottom-color: transparent;
+  height: 300px;
+  width: 300px;
+  animation-delay: 1.25s;
+}
+.arco:nth-child(7){
+  top: 120px;
+  border-color: #9400D3;
+  border-bottom-color: transparent;
+  height: 260px;
+  width: 260px;
+  animation-delay: 1.5s;
+}
+
+.letra{
+  animation: colorir linear infinite 1s;
+}
+
+.letra:nth-child(3n-1){
+  animation-delay: 0.3s;
+}
+
+.letra:nth-child(3n){
+  animation-delay: 0.6s;
+}
+
+@keyframes girar {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes colorir {
+  0%{
+    color: #FF0000;
+  }
+  17%{
+    color: #FF7F00;
+  }
+  34%{
+    color: #FFFF00;
+  }
+  50%{
+    color: #00FF00;
+  }
+  67%{
+    color: #0000FF;
+  }
+  84%{
+    color: #4B0082;
+  }
+  100%{
+    color: #9400D3;
+  }
+}
